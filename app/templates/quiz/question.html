@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+  <p class="progress">Question {{ index + 1 }} of {{ total }}</p>
+  <h1>{{ question.question }}</h1>
+  <form method="post">
+    {% for choice in question.choices %}
+      <button class="choice" type="submit" name="choice" value="{{ loop.index0 }}">{{ choice }}</button>
+    {% endfor %}
+  </form>
+{% endblock %}

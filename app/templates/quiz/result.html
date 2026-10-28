@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% block content %}
+  <h1>Quiz complete!</h1>
+  <p>You scored {{ score }} out of {{ total }}.</p>
+  <p><a href="{{ url_for('quiz.start') }}">Play again</a> &middot; <a href="{{ url_for('main.index') }}">Home</a></p>
+{% endblock %}
